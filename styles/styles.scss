@@ -1,0 +1,57 @@
+.content {
+    width: 930px;
+    margin: 0px auto;
+    padding-top: 131px;
+}
+
+.content + div:nth-child(n) {
+    padding-bottom: 23px;
+}
+
+.title {
+    /* Мои отзывы о товарах */
+    width: 100%;
+    height: 27px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #383838;
+}
+
+.notice {
+    width: 100%;
+    height: 85px;
+    padding-left: 49px;
+
+    display: flex;
+    align-items: center;
+    
+    background: #F7F7F7;
+}
+
+.notice__text {
+    width: 648px;
+    height: 24px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    /* identical to box height, or 160% */
+
+    color: #383838;
+    
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+
+.notice__warning_icon {
+    width: 15px;
+    height: 15px;
+    
+}
