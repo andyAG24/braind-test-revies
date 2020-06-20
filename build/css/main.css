@@ -1,0 +1,114 @@
+.content {
+  width: 930px;
+  margin: 0px auto;
+  padding-top: 131px;
+  display: flex;
+  flex-direction: column; }
+  .content div {
+    margin-bottom: 23px; }
+
+.notice {
+  height: 85px;
+  padding-left: 49px;
+  display: flex;
+  align-items: center;
+  background: #F7F7F7; }
+
+.notice__text {
+  width: 648px;
+  height: 24px;
+  font-size: 15px;
+  line-height: 24px;
+  /* identical to box height, or 160% */
+  color: #383838;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  padding-left: 11px; }
+
+.notice__warning-icon {
+  width: 15px;
+  height: 15px; }
+
+.title {
+  width: 100%;
+  height: 27px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  color: #383838; }
+
+.reviews-table {
+  display: block; }
+
+.reviews-table__header {
+  border: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #979797;
+  display: block; }
+  .reviews-table__header > tr {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0px; }
+
+.reviews-table__header-span {
+  padding-left: 17px;
+  padding-right: 10px; }
+
+.reviews-table__table-columns {
+  height: 39px;
+  line-height: 39px;
+  width: 100%;
+  text-align: left; }
+  .reviews-table__table-columns-photo {
+    width: 6.45%; }
+  .reviews-table__table-columns-item-name {
+    width: 19.35%; }
+  .reviews-table__table-columns-your-review {
+    width: 42.47%; }
+  .reviews-table__table-columns-review-status {
+    width: 13.87%; }
+  .reviews-table__table-columns-actions {
+    width: 17.84%; }
+  .reviews-table__table-columns > th {
+    font-weight: normal;
+    padding: 0; }
+
+.reviews-table__table-content {
+  display: block; }
+
+.reviews-table-item-row {
+  padding-top: 10px;
+  display: block; }
+  .reviews-table-item-row > th {
+    padding-left: 12px;
+    padding-right: 10px; }
+  .reviews-table-item-row__cell-photo {
+    width: 6.45%; }
+    .reviews-table-item-row__cell-photo > img {
+      max-width: 41px; }
+  .reviews-table-item-row__cell-name {
+    width: 19.35%; }
+  .reviews-table-item-row__cell-review {
+    width: 42.47%; }
+  .reviews-table-item-row__cell-status {
+    width: 13.87%; }
+  .reviews-table-item-row__cell-actions {
+    width: 17.84%; }
+  .reviews-table-item-row__cell > th > * {
+    padding: 0; }
+  .reviews-table-item-row__item-name {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: start;
+    display: table-cell;
+    color: #383838; }
+
+body {
+  font-family: Open Sans; }
+
+/*# sourceMappingURL=main.css.map */

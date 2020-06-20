@@ -1,0 +1,47 @@
+.reviews-table {
+    &-item-row {
+        padding-top: 10px;
+        display: block;
+
+        & > th {
+            padding-left: 12px;
+            padding-right: 10px;
+        }
+
+        &__cell {
+            &-photo {
+                width: 6.45%;
+                & > img {
+                    max-width: 41px;
+                    
+                }
+            }
+            &-name {
+                width: 19.35%;
+            }
+            &-review {
+                width: 42.47%;
+            }
+            &-status {
+                width: 13.87%;
+            }
+            &-actions {
+                width: 17.84%;
+            }
+
+            & > th > * {
+                padding: 0;
+            }
+        }
+        &__item-name {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: start;
+            display: table-cell;
+            color: #383838;
+        }
+    }
+}

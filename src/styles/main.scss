@@ -1,0 +1,18 @@
+@import '../blocks/content/content';
+
+@import '../blocks/notice/notice';
+@import '../blocks/notice/__text/_text';
+@import '../blocks/notice/__warning-icon/_warning-icon';
+
+@import '../blocks/title/title';
+
+@import '../blocks/reviews-table/reviews-table.scss';
+@import '../blocks/reviews-table/__header/_header';
+@import '../blocks/reviews-table/__header-span/_header-span';
+@import '../blocks/reviews-table/__table-columns/_table-columns';
+@import '../blocks/reviews-table/__table-content/_table-content';
+@import '../blocks/reviews-table/-item-row/-item-row.scss';
+
+body {
+    font-family: Open Sans;
+}
