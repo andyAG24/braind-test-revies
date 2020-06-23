@@ -1,0 +1,24 @@
+.status_value {
+    &_published {
+        background-color: #50AD01;
+        &::before {
+            content: 'Опубликован';
+        }
+    }
+
+    &_moderation {
+        background-color: #50AD01;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        &::before {
+            content: 'На модерации';
+        }
+    }
+
+    &_not-published {
+        background-color: #A0A0A0;
+        &::before {
+            content: 'Не опубликован';
+        }
+    }
+}

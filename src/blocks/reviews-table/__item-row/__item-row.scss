@@ -1,11 +1,16 @@
 .reviews-table {
-    &-item-row {
+    &__item-row {
         padding-top: 10px;
         display: block;
+        border-top: 1px solid #F2F2F2;
 
         & > th {
             padding-left: 12px;
             padding-right: 10px;
+            vertical-align: top;
+            &:last-child {
+                padding-right: 0px;
+            }
         }
 
         &__cell {
@@ -13,7 +18,7 @@
                 width: 6.45%;
                 & > img {
                     max-width: 41px;
-                    
+                    padding-top: 4px;
                 }
             }
             &-name {
@@ -42,6 +47,16 @@
             text-align: start;
             display: table-cell;
             color: #383838;
+        }
+
+        &__publish-date {
+            width: auto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #AFAFAF;
+            padding-top: 4px;
         }
     }
 }

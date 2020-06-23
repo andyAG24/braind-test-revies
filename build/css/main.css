@@ -1,10 +1,11 @@
+@charset "UTF-8";
 .content {
   width: 930px;
   margin: 0px auto;
   padding-top: 131px;
   display: flex;
   flex-direction: column; }
-  .content div {
+  .content > div {
     margin-bottom: 23px; }
 
 .notice {
@@ -42,6 +43,7 @@
 
 .reviews-table__header {
   border: 1px solid #F2F2F2;
+  border-bottom: none;
   box-sizing: border-box;
   font-size: 13px;
   color: #979797;
@@ -78,27 +80,32 @@
 .reviews-table__table-content {
   display: block; }
 
-.reviews-table-item-row {
+.reviews-table__item-row {
   padding-top: 10px;
-  display: block; }
-  .reviews-table-item-row > th {
+  display: block;
+  border-top: 1px solid #F2F2F2; }
+  .reviews-table__item-row > th {
     padding-left: 12px;
-    padding-right: 10px; }
-  .reviews-table-item-row__cell-photo {
+    padding-right: 10px;
+    vertical-align: top; }
+    .reviews-table__item-row > th:last-child {
+      padding-right: 0px; }
+  .reviews-table__item-row__cell-photo {
     width: 6.45%; }
-    .reviews-table-item-row__cell-photo > img {
-      max-width: 41px; }
-  .reviews-table-item-row__cell-name {
+    .reviews-table__item-row__cell-photo > img {
+      max-width: 41px;
+      padding-top: 4px; }
+  .reviews-table__item-row__cell-name {
     width: 19.35%; }
-  .reviews-table-item-row__cell-review {
+  .reviews-table__item-row__cell-review {
     width: 42.47%; }
-  .reviews-table-item-row__cell-status {
+  .reviews-table__item-row__cell-status {
     width: 13.87%; }
-  .reviews-table-item-row__cell-actions {
+  .reviews-table__item-row__cell-actions {
     width: 17.84%; }
-  .reviews-table-item-row__cell > th > * {
+  .reviews-table__item-row__cell > th > * {
     padding: 0; }
-  .reviews-table-item-row__item-name {
+  .reviews-table__item-row__item-name {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -107,6 +114,147 @@
     text-align: start;
     display: table-cell;
     color: #383838; }
+  .reviews-table__item-row__publish-date {
+    width: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #AFAFAF;
+    padding-top: 4px; }
+
+.reviews-table__see-more-button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-family: Open Sans;
+  font-size: 11px;
+  line-height: 20px;
+  color: #FF6D00;
+  margin-top: 4px;
+  margin-bottom: 8px; }
+  .reviews-table__see-more-button_expand::before {
+    content: 'Подробнее'; }
+  .reviews-table__see-more-button_expand > img {
+    padding-left: 5px;
+    padding-bottom: 0px; }
+  .reviews-table__see-more-button_collapse::before {
+    content: 'Свернуть'; }
+  .reviews-table__see-more-button_collapse > img {
+    transform: rotateZ(180deg);
+    padding-right: 5px;
+    padding-left: 0px; }
+
+.status {
+  width: auto;
+  max-width: 100%;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 14px;
+  color: white;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .status::before {
+    padding: 4px 6px; }
+
+.status_value_published {
+  background-color: #50AD01; }
+  .status_value_published::before {
+    content: 'Опубликован'; }
+
+.status_value_moderation {
+  background-color: #50AD01;
+  mix-blend-mode: normal;
+  opacity: 0.6; }
+  .status_value_moderation::before {
+    content: 'На модерации'; }
+
+.status_value_not-published {
+  background-color: #A0A0A0; }
+  .status_value_not-published::before {
+    content: 'Не опубликован'; }
+
+.rating {
+  display: inline-block; }
+  .rating.rating__numerical-rating {
+    display: inline-block;
+    float: left;
+    margin-left: 9px;
+    color: #AFAFAF; }
+
+.rating__stars {
+  float: left;
+  display: inline-block;
+  padding-top: 2px; }
+
+.rating__stars input[type="radio"] {
+  display: none; }
+
+.label_rating.label_rating {
+  float: right;
+  cursor: pointer;
+  background: url("../../img/icon/rating-star-icon-11-256.png") no-repeat;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.3s; }
+  .label_rating.label_rating:not(:last-child) {
+    margin-left: 4px; }
+
+/*Пишем правила смены положения background-а*/
+.rating__stars .label_rating:hover,
+.rating__stars .label_rating:hover ~ .label_rating,
+.rating__stars input[type="radio"]:checked ~ .label_rating {
+  filter: none;
+  transition: 0.15s; }
+
+.rating.rating__impressions {
+  display: inline-block;
+  font-weight: normal;
+  color: #AFAFAF; }
+  .rating.rating__impressions > div {
+    padding-right: 14px; }
+  .rating.rating__impressions-wrapper {
+    float: left;
+    margin-top: 6px; }
+  .rating.rating__impressions.rating__impressions-name, .rating.rating__impressions.rating__impressions-value {
+    font-size: 12px;
+    line-height: 20px; }
+  .rating.rating__impressions.rating__impressions-value {
+    font-weight: bold; }
+
+.action-button {
+  width: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #979797;
+  border: 1px solid #979797;
+  border-radius: 2px;
+  background-color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.2s;
+  cursor: pointer; }
+  .action-button:hover {
+    background-color: #979797;
+    color: white;
+    transition: 0.2s; }
+
+.article-text {
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 12px;
+  transition: height 300ms; }
 
 body {
   font-family: Open Sans; }

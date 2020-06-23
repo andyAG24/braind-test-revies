@@ -1,0 +1,65 @@
+.rating {
+    display: inline-block;
+    &.rating__numerical-rating {
+        display: inline-block;
+        float: left;
+        margin-left: 9px;
+        color: #AFAFAF;
+    }
+}
+
+.rating__stars {
+    // width: 125px;
+    float: left;
+    display: inline-block;
+    padding-top: 2px;
+    // height: 25px;
+}
+.rating__stars input[type="radio"] {
+    display: none;
+}
+.label_rating.label_rating {
+    float: right;
+    cursor: pointer;
+    background: url('../../img/icon/rating-star-icon-11-256.png') no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    &:not(:last-child) {
+        margin-left: 4px;
+    }
+}
+/*Пишем правила смены положения background-а*/
+.rating__stars .label_rating:hover, /*Правило для ховера на текущий лейбл*/
+.rating__stars .label_rating:hover ~ .label_rating, /*Правило для всех следующих лейблов по DOM дереву*/
+.rating__stars input[type="radio"]:checked ~ .label_rating /*Правило для всех следующих лейблов после выбранного инпута, чтобы звездочки как бы зафиксировались*/
+{
+    filter: none;
+    transition: 0.15s;
+}
+
+.rating.rating__impressions {
+    display: inline-block;
+    font-weight: normal;
+    color: #AFAFAF;
+    & > div {
+        padding-right: 14px;
+    }
+
+    &-wrapper {
+        float: left;
+        margin-top: 6px;
+    }
+
+    &.rating__impressions-name,
+    &.rating__impressions-value {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    &.rating__impressions-value {
+        font-weight: bold;
+    }
+}

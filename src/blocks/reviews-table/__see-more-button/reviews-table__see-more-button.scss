@@ -1,0 +1,35 @@
+.reviews-table__see-more-button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-family: Open Sans;
+    font-size: 11px;
+    line-height: 20px;
+    color: #FF6D00;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    &_expand {
+        &::before {
+            content: 'Подробнее';
+            
+        }
+        & > img {
+            padding-left: 5px;
+            padding-bottom: 0px;
+        }
+    }
+
+    &_collapse {
+        &::before {
+            content: 'Свернуть';
+        }
+        & > img {
+            transform: rotateZ(180deg);
+            padding-right: 5px;
+            padding-left: 0px;
+        };
+    }
+
+
+}

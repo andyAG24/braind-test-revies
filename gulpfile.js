@@ -1,14 +1,15 @@
 var config = {
   srcDir: './src/styles',
   sassPattern: '*.scss',
-  clean: 'build/css',
+  cssDir: 'build/css',
+  jsDir: 'build/js',
   watch: {
     html: './build/index.html',
     sass: './src/styles/main.scss'
   }
-}
+};
 
-var gulp = require('gulp'), 
+var gulp = require('gulp'),
   sass = require('gulp-sass');
 const concat = require('gulp-concat'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -28,11 +29,28 @@ gulp.task('sass', function () {
 });
  
 gulp.task('watch', function() {
-  gulp.watch(['build/index.html', 'src/blocks/**/*.scss'], gulp.series(['clean', 'sass', 'browser-sync']));
+  gulp.watch(
+    [
+      'build/index.html', 
+      'src/blocks/**/*.scss', 
+      'src/styles/main.scss',
+
+      'src/js/script.js',
+      'src/blocks/**/*.js'
+    ], 
+    gulp.series(['clean', 'sass', 'js', 'browser-sync']));
+});
+
+gulp.task('js', function(done) {
+  return gulp.src('./src/blocks/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('script.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./build/js'))
 });
 
 gulp.task('clean', function(done) {
-  del(config.clean);
+  del(config.cssDir, config.jsDir);
   done();
 });
 

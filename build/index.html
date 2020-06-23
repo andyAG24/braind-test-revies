@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <title>Отзывы</title>
 </head>
 <body>
@@ -36,19 +38,86 @@
                 </tr>
            </thead>
            <tbody class="reviews-table__table-content">
-               <tr class="reviews-table-item-row">
-                   <th class="reviews-table-item-row__cell-photo">
+               <tr class="reviews-table__item-row">
+                   <th class="reviews-table__item-row__cell-photo">
                        <img src="./img/Drill.png" alt="">
                    </th>
-                   <th class="reviews-table-item-row__cell-name">
-                       <span class="reviews-table-item-row__item-name">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</span>
+                   <th class="reviews-table__item-row__cell-name">
+                       <span class="reviews-table__item-row__item-name">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</span>
                    </th>
-                   <th class="reviews-table-item-row__cell-review"></th>
-                   <th class="reviews-table-item-row__cell-status"></th>
-                   <th class="reviews-table-item-row__cell-actions"></th>
+                   <th class="reviews-table__item-row__cell-review">
+                        <div class="rating">
+                            <div class="rating rating__stars">
+                                <input name="rating" value="5" id="rating_5" type="radio" />
+                                <label for="rating_5" class="label_rating"></label>
+                                
+                                <input name="rating" value="4" id="rating_4" type="radio" />
+                                <label for="rating_4" class="label_rating"></label>
+                                
+                                <input name="rating" value="3" id="rating_3" type="radio" />
+                                <label for="rating_3" class="label_rating"></label>
+                                
+                                <input name="rating" value="2" id="rating_2" type="radio" />
+                                <label for="rating_2" class="label_rating"></label>
+                                
+                                <input name="rating" value="1" id="rating_1" type="radio" />
+                                <label for="rating_1" class="label_rating"></label>
+                            </div>
+                            <div class="rating rating__numerical-rating">
+                                <span>4,6</span>
+                            </div>
+                            <div class="rating rating__impressions rating__impressions-wrapper">
+                                <div class="rating rating__impressions rating__impressions-impression">
+                                    <span class="rating rating__impressions rating__impressions-name">Впечатление:</span>
+                                    <span class="rating rating__impressions rating__impressions-value">5</span>
+                                </div>
+                                <div class="rating rating__impressions rating__impressions-conformity">
+                                    <span class="rating rating__impressions rating__impressions-name">Соответствие:</span>
+                                    <span class="rating rating__impressions rating__impressions-value">4</span>
+                                </div>
+                                <div class="rating rating__impressions rating__impressions-reliability">
+                                    <span class="rating rating__impressions rating__impressions-name">Надежность:</span>
+                                    <span class="rating rating__impressions rating__impressions-value">5</span>
+                                </div>
+                            </div>
+                        </div> 
+                        <span class="article-text">Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО РАБОТАТЬ. Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО РАБОТАТЬ.</span>
+                        <button class="reviews-table reviews-table__see-more-button reviews-table__see-more-button_expand">
+                            <img src="./img/icon/arrow.svg" alt="">
+                        </button>
+                    </th>
+                   <th class="reviews-table__item-row__cell-status">
+                       <div class="reviews-table__item-row__status-wrapper status status_value_published"></div>
+                       <div class="reviews-table__item-row__cell-status reviews-table__item-row__publish-date">
+                           <span>1 августа, 2018</span>
+                       </div>
+                   </th>
+                   <th class="reviews-table__item-row__cell-actions">
+                       <button class="action-button">Дополнить отзыв</button>
+                   </th>
+               </tr>
+               <tr class="reviews-table__item-row">
+                   <th class="reviews-table__item-row__cell-photo">
+                       <img src="./img/Screen.png" alt="">
+                   </th>
+                   <th class="reviews-table__item-row__cell-name">
+                       <span class="reviews-table__item-row__item-name">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</span>
+                   </th>
+                   <th class="reviews-table__item-row__cell-review">
+                        <span class="article-text">К сожалению, ваш отзыв не прошёл модерацию.</span>
+                    </th>
+                   <th class="reviews-table__item-row__cell-status">
+                       <div class="reviews-table__item-row__status-wrapper status status_value_not-published"></div>
+                       <div class="reviews-table__item-row__cell-status reviews-table__item-row__publish-date">
+                           <span>23 июня, 2019</span>
+                       </div>
+                   </th>
+                   <th class="reviews-table__item-row__cell-actions">
+                   </th>
                </tr>
            </tbody>
         </table>
-    </div>  
+    </div> 
+    <script src="./js/script.js"></script> 
 </body>
 </html>
