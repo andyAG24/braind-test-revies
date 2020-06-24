@@ -1,0 +1,13 @@
+.reviews-table {
+    &__buyer-photo-wrapper {
+        border: 1px solid #EBEBEA;
+        width: 68px;
+        height: 68px;
+        display: flex;
+        margin-right: 8px;
+        // margin-bottom: 8px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

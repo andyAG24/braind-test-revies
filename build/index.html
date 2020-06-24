@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -46,25 +47,27 @@
                        <span class="reviews-table__item-row__item-name">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</span>
                    </th>
                    <th class="reviews-table__item-row__cell-review">
-                        <div class="rating">
-                            <div class="rating rating__stars">
-                                <input name="rating" value="5" id="rating_5" type="radio" />
-                                <label for="rating_5" class="label_rating"></label>
-                                
-                                <input name="rating" value="4" id="rating_4" type="radio" />
-                                <label for="rating_4" class="label_rating"></label>
-                                
-                                <input name="rating" value="3" id="rating_3" type="radio" />
-                                <label for="rating_3" class="label_rating"></label>
-                                
-                                <input name="rating" value="2" id="rating_2" type="radio" />
-                                <label for="rating_2" class="label_rating"></label>
-                                
-                                <input name="rating" value="1" id="rating_1" type="radio" />
-                                <label for="rating_1" class="label_rating"></label>
-                            </div>
-                            <div class="rating rating__numerical-rating">
-                                <span>4,6</span>
+                        <div class="rating rating__wrapper">
+                            <div class="rating rating__stars-wrapper">
+                                <div class="rating rating__stars">
+                                    <input name="rating" value="5" id="rating_5" type="radio" />
+                                    <label for="rating_5" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="4" id="rating_4" type="radio" />
+                                    <label for="rating_4" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="3" id="rating_3" type="radio" />
+                                    <label for="rating_3" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="2" id="rating_2" type="radio" />
+                                    <label for="rating_2" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="1" id="rating_1" type="radio" />
+                                    <label for="rating_1" class="label_rating"></label>
+                                </div>
+                                <div class="rating rating__numerical-rating">
+                                    <span>4,6</span>
+                                </div>
                             </div>
                             <div class="rating rating__impressions rating__impressions-wrapper">
                                 <div class="rating rating__impressions rating__impressions-impression">
@@ -81,9 +84,11 @@
                                 </div>
                             </div>
                         </div> 
-                        <span class="article-text">Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО РАБОТАТЬ. Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО РАБОТАТЬ.</span>
+                        <span class="article-text">Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО РАБОТАТЬ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id dui at tortor condimentum ultricies. Vivamus ac ligula cursus, malesuada erat eleifend, tincidunt nunc. Nulla imperdiet ac est eget rhoncus. Praesent maximus, nisl vel bibendum bibendum, justo metus vulputate justo, quis maximus est eros vel nunc. Praesent ac elit gravida massa pulvinar lacinia. Nulla scelerisque nulla nulla, vel finibus justo tempor nec. Etiam rutrum ultricies tortor, non consectetur odio vehicula a. Nam laoreet neque a luctus aliquet. Cras pharetra egestas egestas. Suspendisse vitae metus ac orci commodo tempus vel vitae libero. Nulla non purus sit amet enim tempus auctor at sit amet metus. Suspendisse vitae convallis sem. Integer ut odio vel diam posuere volutpat ac vel dui. Aenean sed lacus sed elit mollis interdum. Aenean aliquam dui sem, in eleifend augue faucibus vitae. Nunc sed odio sodales, congue magna nec, consequat risus.
+
+                        </span>
                         <button class="reviews-table reviews-table__see-more-button reviews-table__see-more-button_expand">
-                            <img src="./img/icon/arrow.svg" alt="">
+                            <img class="reviews-table__see-more-button-arrow" src="./img/icon/arrow.svg" alt="">
                         </button>
                     </th>
                    <th class="reviews-table__item-row__cell-status">
@@ -96,7 +101,39 @@
                        <button class="action-button">Дополнить отзыв</button>
                    </th>
                </tr>
-               <tr class="reviews-table__item-row">
+                <tr class="reviews-table__item-row reviews-table__item-row-addition">
+                    <th class="reviews-table__item-row__cell-photo">
+                    </th>
+                    <th class="reviews-table__item-row__cell-name">
+                    </th>
+                    <th class="reviews-table__item-row__cell-review">
+                        <span class="article-text article-text__addition-title">Дополненный отзыв</span>
+                        <span class="article-text">Год прошел, работает как пушка!</span>
+                        <button class="reviews-table reviews-table__see-more-button reviews-table__see-more-button_expand">
+                            <img src="./img/icon/arrow.svg" alt="">
+                        </button>
+                        <div class="reviews-table__buyer-photos">
+                            <div class="reviews-table__buyer-photo-wrapper">
+                                <img class="reviews-table__buyer-photo" src="./img/Drill_1.png" alt="">
+                            </div>
+                            <div class="reviews-table__buyer-photo-wrapper">
+                                <img class="reviews-table__buyer-photo" src="./img/Drill_2.png" alt="">
+                            </div>
+                            <div class="reviews-table__buyer-photo-wrapper">
+                                <img class="reviews-table__buyer-photo" src="./img/Drill_3.png" alt="">
+                            </div>
+                        </div>
+                    </th>
+                    <th class="reviews-table__item-row__cell-status">
+                        <div class="reviews-table__item-row__status-wrapper status status_value_moderation"></div>
+                        <div class="reviews-table__item-row__cell-status reviews-table__item-row__publish-date">
+                            <span>19 августа, 2018</span>
+                        </div>
+                    </th>
+                    <th class="reviews-table__item-row__cell-actions">
+                    </th>
+                </tr>
+               <tr class="reviews-table__item-row reviews-table__item-row-addition">
                    <th class="reviews-table__item-row__cell-photo">
                        <img src="./img/Screen.png" alt="">
                    </th>
@@ -105,6 +142,9 @@
                    </th>
                    <th class="reviews-table__item-row__cell-review">
                         <span class="article-text">К сожалению, ваш отзыв не прошёл модерацию.</span>
+                        <button class="reviews-table reviews-table__see-more-button reviews-table__see-more-button_expand">
+                            <img src="./img/icon/arrow.svg" alt="">
+                        </button>
                     </th>
                    <th class="reviews-table__item-row__cell-status">
                        <div class="reviews-table__item-row__status-wrapper status status_value_not-published"></div>

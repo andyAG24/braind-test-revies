@@ -1,0 +1,9 @@
+.reviews-table {
+    &__buyer-photos {
+        float: left;
+        padding-top: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

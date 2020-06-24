@@ -1,0 +1,9 @@
+.modal {
+    &__backdrop {
+        background-color: black;
+        opacity: 0.3;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

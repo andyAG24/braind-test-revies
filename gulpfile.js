@@ -15,13 +15,15 @@ const concat = require('gulp-concat'),
   sourcemaps = require('gulp-sourcemaps'),
   clean = require('gulp-clean'),
   watch = require('gulp-watch'),
-  del = require('del');
+  del = require('del'),
+  autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
   return gulp.src(config.srcDir + '/' + config.sassPattern)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
+  .pipe(autoprefixer())
   .pipe(concat('main.css'))
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('./build/css'))

@@ -1,20 +1,38 @@
+'use strict';
 var size = 192,
-    articleContent = $('.article-text');
+    articleContent = $('.article-text'),
+    fullArticles = [],
+    croppedArticles = [];
     
-for (elem of articleContent) {
-    articleText  = $(elem).text();
+var countOfCroppedArticles = 0;
+for (let elem of articleContent) {
+    let articleText  = $(elem).text();
+    let croppedText;
     if (articleText.length > size) {
-        $(elem).text(articleText.slice(0, size) + '...');
+        fullArticles.push(articleText);
+        countOfCroppedArticles++;
+        croppedText = articleText.slice(0, size) + '...';
+        croppedArticles.push(croppedText);
+        $(elem).text(croppedText);
+
+        elem.classList.add('collapsed');
+    } else {
+        let siblings = elem.parentElement.children;
+        let siblingsArray = Array.prototype.slice.call(siblings);
+        siblingsArray.forEach(element => {
+            if ($(element).hasClass('reviews-table__see-more-button')) {
+                $(element).remove();
+            };
+        });
     }
 }
 
+var seeMoreButton = $('.reviews-table__see-more-button_expand'),
+    seeMoreButtonCollapse = $('.reviews-table__see-more-button_collapse');
 
-var seeMoreButton, seeMoreButtonCollapse;
-updateButtons();
-
-for (button of seeMoreButton) {
-    button.onclick = (event) => {
-        target = event.target;
+for (let button of seeMoreButton) {
+    $(button).bind('click', (event) => {
+        let target = event.target;
         if ($(target).hasClass('reviews-table__see-more-button_expand')) {
             expandText(event);
             target.classList.remove('reviews-table__see-more-button_expand');
@@ -24,36 +42,29 @@ for (button of seeMoreButton) {
             target.classList.remove('reviews-table__see-more-button_collapse');
             target.classList.add('reviews-table__see-more-button_expand');
         }
-        // 
-        // button.classList.add('reviews-table__see-more-button_collapse');
-        // button.onclick = collapseText(); 
-    }
+    });
 }
 
 function expandText(ev) {
-    let siblings = ev.target.parentElement.children;
-    let content, index;
-    for (elem of siblings) {
-        if ($(elem).hasClass('article-text')) {
-            content = $(elem);
-            let siblingsArray = Array.prototype.slice.call(siblings);
-            index = siblingsArray.indexOf(elem);
-        }
-    }
-    let articleText = articleContent.text();
-    $(content).text(articleText.slice(0, articleText.length));
+    let button = $('.reviews-table__see-more-button');
+    let textBlock = ev.target.previousElementSibling;
+
+    if ($(textBlock).hasClass('article-text collapsed')) {
+        let index = button.index(ev.target);
+        $(textBlock).text(fullArticles[index]);
+        textBlock.classList.remove('collapsed');
+        textBlock.classList.add('expanded');
+    };
 }
 
 function collapseText(ev) {
-    let siblings = ev.target.parentElement.children;
-    for (elem of siblings) {
-        if ($(elem).hasClass('article-text')) content = $(elem);
-    }
-    let articleText = articleContent.text();
-    $(content).text(articleText.slice(0, size) + '...');
-}
+    let button = $('.reviews-table__see-more-button');
+    let textBlock = ev.target.previousElementSibling;
 
-function updateButtons() {
-    seeMoreButton = $('.reviews-table__see-more-button_expand');
-    seeMoreButtonCollapse = $('.reviews-table__see-more-button_collapse');
+    if ($(textBlock).hasClass('article-text expanded')) {
+        let index = button.index(ev.target);
+        $(textBlock).text(croppedArticles[index]);
+        textBlock.classList.add('collapsed');
+        textBlock.classList.remove('expanded');
+    };
 }

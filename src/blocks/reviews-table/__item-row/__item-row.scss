@@ -3,6 +3,7 @@
         padding-top: 10px;
         display: block;
         border-top: 1px solid #F2F2F2;
+        padding-bottom: 8px;
 
         & > th {
             padding-left: 12px;
@@ -10,6 +11,15 @@
             vertical-align: top;
             &:last-child {
                 padding-right: 0px;
+            }
+        }
+
+        &-addition {
+            & > .reviews-table__item-row__cell-photo {
+                width: 66px;
+            }
+            & > th {
+                padding-bottom: 34px;
             }
         }
 

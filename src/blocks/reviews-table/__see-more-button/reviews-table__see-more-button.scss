@@ -7,17 +7,17 @@
     line-height: 20px;
     color: #FF6D00;
     margin-top: 4px;
-    margin-bottom: 8px;
+    padding: 0;
+    // margin-bottom: 8px;
 
     &_expand {
         &::before {
             content: 'Подробнее';
-            
         }
-        & > img {
-            padding-left: 5px;
-            padding-bottom: 0px;
-        }
+        // &:after {
+        //     background: url('../../../img/icon/arrow.svg') no-repeat;
+        // }
+        
     }
 
     &_collapse {
