@@ -9,3 +9,12 @@
     // text-overflow: ellipsis;
     transition: height 300ms;
 }
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    .article-text {
+        display: inline-block;
+        padding-top: 9px;
+        float: left;
+        width: 100%;
+    }
+}

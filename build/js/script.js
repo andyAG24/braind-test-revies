@@ -69,16 +69,22 @@ function collapseText(ev) {
     };
 }
 
-let modalBackdrop = document.getElementsByClassName('modal-backdrop')[0];
-if (modalBackdrop) {
-    modalBackdrop.onclick = () => {
-        closeModal();
+if (document.documentElement.clientWidth <= 720) {
+    let articleTitle = $('.article-text.article-text__addition-title');
+    for (let elem of articleTitle) {
+        let itemRow = elem.parentElement.parentElement;
+
+        let row = document.createElement('th');
+        row.classList = ['reviews-table__item-row__addition-title'];
+        row.appendChild(elem);
+        itemRow.append(row);
+        
+        for (let child of itemRow.children) {
+            console.log($(child));
+        }
     }
 }
 
-function closeModal() {
-    alert();
-}
 
 let miniPhoto = $('.reviews-table__buyer-photo');
 
@@ -93,9 +99,6 @@ for (let elem of miniPhoto) {
         modalBackdropContainer.classList.add('modal__backdrop');
         
         modalContainer.append(modalBackdropContainer);
-        modalContainer.onclick = () => {
-            alert();
-        }
 
         let previewContainer = document.createElement('div');
         let img = document.createElement('img');
@@ -136,4 +139,3 @@ for (let elem of seeMoreArrow) {
         event.target.parentElement.click();
     });
 }
-//# sourceMappingURL=script.js.map

@@ -1,0 +1,30 @@
+.reviews-table {
+    &__table-columns {
+        height: 39px;
+        line-height: 39px;
+        width: 100%;
+        text-align: left;
+
+        &-photo {
+            width: 6.45%;
+        }
+
+        &-item-name {
+            width: 19.35%;
+        }
+        &-your-review {
+            width: 42.47%;
+        }
+        &-review-status {
+            width: 13.87%;
+        }
+        &-actions {
+            width: 17.84%;
+        }
+
+        & > th {
+            font-weight: normal;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.reviews-table {
+    &__item-row {
+        &_errored {
+            & > .reviews-table__item-row__cell-actions {
+                display: none;
+            }
+        }
+    }
+}

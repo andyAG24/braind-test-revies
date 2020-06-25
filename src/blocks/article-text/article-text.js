@@ -68,3 +68,20 @@ function collapseText(ev) {
         textBlock.classList.remove('expanded');
     };
 }
+
+if (document.documentElement.clientWidth <= 720) {
+    let articleTitle = $('.article-text.article-text__addition-title');
+    // console.log($(articleTitle));
+    for (let elem of articleTitle) {
+        let itemRow = elem.parentElement.parentElement;
+
+        let row = document.createElement('th');
+        row.classList = ['reviews-table__item-row__addition-title'];
+        row.appendChild(elem);
+        itemRow.append(row);
+        
+        for (let child of itemRow.children) {
+            console.log($(child));
+        }
+    }
+}

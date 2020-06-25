@@ -7,3 +7,12 @@
         flex-wrap: wrap;
     }
 }
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    .reviews-table {
+        &__buyer-photos {
+            display: block;
+            // float: none;
+        }
+    }
+}

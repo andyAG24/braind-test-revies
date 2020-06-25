@@ -22,3 +22,14 @@
         transition: 0.2s;
     }
 }
+
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .action-button {
+        font-size: 16px;
+        line-height: 22px;  
+        width: 71%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}

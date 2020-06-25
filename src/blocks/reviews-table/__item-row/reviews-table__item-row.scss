@@ -1,0 +1,179 @@
+.reviews-table {
+    &__item-row {
+        &__publish-date {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #AFAFAF;
+        }
+    }
+}
+
+@media screen and (min-width:721px) {
+    .reviews-table {
+        &__item-row {
+            padding-top: 10px;
+            display: block;
+            border-top: 1px solid #F2F2F2;
+            padding-bottom: 8px;
+
+            & > th {
+                padding-left: 12px;
+                padding-right: 10px;
+                vertical-align: top;
+                &:last-child {
+                    padding-right: 0px;
+                }
+            }
+
+            &-addition {
+                & > .reviews-table__item-row__cell-photo {
+                    width: 66px;
+                }
+                & > th {
+                    padding-bottom: 34px;
+                }
+                & > .reviews-table__item-row__cell-review {
+                    & > .rating {
+                        display: none;
+                    }
+                }
+            }
+
+            &__cell {
+                &-photo {
+                    width: 6.45%;
+                    & > img {
+                        max-width: 41px;
+                        padding-top: 4px;
+                    }
+                }
+                &-name {
+                    width: 19.35%;
+                }
+                &-review {
+                    width: 42.47%;
+                }
+                &-status {
+                    width: 13.87%;
+                }
+                &-actions {
+                    width: 17.84%;
+                }
+
+                & > th > * {
+                    padding: 0;
+                }
+            }
+            &__item-name {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 16px;
+                text-align: start;
+                display: table-cell;
+                color: #383838;
+            }
+
+            &__publish-date {
+                width: auto;
+                font-style: normal;
+                padding-top: 4px;
+            }
+        }
+    }
+}
+
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .reviews-table {
+        &__item-row {
+            padding: 18px 20px;
+            display: grid;
+            grid-template-columns: 1fr 82%;
+            &__cell {
+                &-status {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: space-between;
+                    grid-row: 1;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+                &-name {
+                    padding-top: 7px;
+                    padding-left: 14px;
+                }
+                &-photo {
+                    display: flex;
+                    margin: auto;
+                }
+                &-review {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+                &-actions {
+                    padding-top: 12px;
+                    display: flex;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+            }
+
+            &-addition {
+                padding-top: 5px;
+                grid-template-columns: none;
+                .reviews-table__item-row__cell-review {
+                    padding-top: 8px;
+                }
+            }
+
+            &__item-name {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: start;
+                display: table-cell;
+                color: #383838;
+            }
+
+            &__addition-title {
+                & > .article-text.article-text__addition-title {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+
+            &-addition {
+                border-top: 1px solid #F2F2F2;
+                border-bottom: 1px solid #F2F2F2;
+
+                .reviews-table {
+                    &__item-row {
+                        &__cell {
+                            &-photo {
+                                display: none;
+                            }
+                            &-name {
+                                display: none;
+                            }
+                            &-review {
+                                grid-row: 3 / 4;
+                            }
+                            &-status {
+                                grid-row: 2 / 3;
+                            }
+                            &-actions {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -107,6 +107,43 @@
                     <th class="reviews-table__item-row__cell-name">
                     </th>
                     <th class="reviews-table__item-row__cell-review">
+                        <div class="rating rating__wrapper">
+                            <div class="rating rating__stars-wrapper">
+                                <div class="rating rating__stars">
+                                    <input name="rating" value="5" id="rating_5" type="radio" />
+                                    <label for="rating_5" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="4" id="rating_4" type="radio" />
+                                    <label for="rating_4" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="3" id="rating_3" type="radio" />
+                                    <label for="rating_3" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="2" id="rating_2" type="radio" />
+                                    <label for="rating_2" class="label_rating"></label>
+                                    
+                                    <input name="rating" value="1" id="rating_1" type="radio" />
+                                    <label for="rating_1" class="label_rating"></label>
+                                </div>
+                                <div class="rating rating__numerical-rating">
+                                    <span>4,6</span>
+                                </div>
+                            </div>
+                            <div class="rating rating__impressions rating__impressions-wrapper">
+                                <div class="rating rating__impressions rating__impressions-impression">
+                                    <span class="rating rating__impressions rating__impressions-name">Впечатление:</span>
+                                    <span class="rating rating__impressions rating__impressions-value">5</span>
+                                </div>
+                                <div class="rating rating__impressions rating__impressions-conformity">
+                                    <span class="rating rating__impressions rating__impressions-name">Соответствие:</span>
+                                    <span class="rating rating__impressions rating__impressions-value">4</span>
+                                </div>
+                                <div class="rating rating__impressions rating__impressions-reliability">
+                                    <span class="rating rating__impressions rating__impressions-name">Надежность:</span>
+                                    <span class="rating rating__impressions rating__impressions-value">5</span>
+                                </div>
+                            </div>
+                        </div> 
                         <span class="article-text article-text__addition-title">Дополненный отзыв</span>
                         <span class="article-text">Год прошел, работает как пушка!</span>
                         <button class="reviews-table reviews-table__see-more-button reviews-table__see-more-button_expand">
@@ -133,15 +170,15 @@
                     <th class="reviews-table__item-row__cell-actions">
                     </th>
                 </tr>
-               <tr class="reviews-table__item-row reviews-table__item-row-addition">
+               <tr class="reviews-table__item-row reviews-table__item-row_errored">
                    <th class="reviews-table__item-row__cell-photo">
                        <img src="./img/Screen.png" alt="">
-                   </th>
+                </th>
                    <th class="reviews-table__item-row__cell-name">
                        <span class="reviews-table__item-row__item-name">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</span>
                    </th>
                    <th class="reviews-table__item-row__cell-review">
-                        <span class="article-text">К сожалению, ваш отзыв не прошёл модерацию.</span>
+                        <span class="article-text article-text_error">К сожалению, ваш отзыв не прошёл модерацию.</span>
                         <button class="reviews-table reviews-table__see-more-button reviews-table__see-more-button_expand">
                             <img src="./img/icon/arrow.svg" alt="">
                         </button>

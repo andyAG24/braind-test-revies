@@ -8,16 +8,11 @@
     color: #FF6D00;
     margin-top: 4px;
     padding: 0;
-    // margin-bottom: 8px;
 
     &_expand {
         &::before {
             content: 'Подробнее';
         }
-        // &:after {
-        //     background: url('../../../img/icon/arrow.svg') no-repeat;
-        // }
-        
     }
 
     &_collapse {
@@ -30,6 +25,16 @@
             padding-left: 0px;
         };
     }
+}
 
-
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .reviews-table__see-more-button {
+        font-size: 14px;
+        line-height: 22px;
+        color: #FF6D00;
+        &-arrow.reviews-table__see-more-button-arrow {
+            padding-bottom: 1px;
+        }
+    }  
 }

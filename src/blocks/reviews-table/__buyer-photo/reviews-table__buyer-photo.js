@@ -11,9 +11,6 @@ for (let elem of miniPhoto) {
         modalBackdropContainer.classList.add('modal__backdrop');
         
         modalContainer.append(modalBackdropContainer);
-        modalContainer.onclick = () => {
-            alert();
-        }
 
         let previewContainer = document.createElement('div');
         let img = document.createElement('img');

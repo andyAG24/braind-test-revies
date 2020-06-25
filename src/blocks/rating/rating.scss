@@ -9,11 +9,9 @@
 }
 
 .rating__stars {
-    // width: 125px;
     float: left;
     display: inline-block;
     padding-top: 2px;
-    // height: 25px;
 }
 .rating__stars input[type="radio"] {
     display: none;
@@ -62,4 +60,23 @@
     &.rating__impressions-value {
         font-weight: bold;
     }
+}
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    .rating {
+        &.rating__impressions {
+            text-align: start;
+    
+            &-wrapper {
+                float: left;
+                margin-top: 0px;
+            }
+        }
+        &.rating__numerical-rating {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+    }
+    
 }

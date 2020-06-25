@@ -1,27 +1,27 @@
 @import '../blocks/content/content';
 
 @import '../blocks/notice/notice';
-@import '../blocks/notice/__text/_text';
-@import '../blocks/notice/__warning-icon/_warning-icon';
+@import '../blocks/notice/__text/notice__text.scss';
+@import '../blocks/notice/__warning-icon/notice__warning-icon.scss';
 
 @import '../blocks/title/title';
 
 @import '../blocks/reviews-table/reviews-table.scss';
-@import '../blocks/reviews-table/__header/_header';
-@import '../blocks/reviews-table/__header-span/_header-span';
-@import '../blocks/reviews-table/__table-columns/_table-columns';
-@import '../blocks/reviews-table/__table-content/_table-content';
-@import '../blocks/reviews-table/__item-row/__item-row.scss';
+@import '../blocks/reviews-table/__header/reviews-table__header.scss';
+@import '../blocks/reviews-table/__header-span/reviews-table__header-span.scss';
+@import '../blocks/reviews-table/__table-columns/reviews-table__table-columns.scss';
+@import '../blocks/reviews-table/__table-content/reviews-table__table-content.scss';
+@import '../blocks/reviews-table/__item-row/reviews-table__item-row.scss';
+@import '../blocks/reviews-table/__item-row/_errored/reviews-table__item-row_errored.scss';
 @import '../blocks/reviews-table/__see-more-button/reviews-table__see-more-button.scss';
 @import '../blocks/reviews-table/__see-more-button-arrow/reviews-table__see-more-button-arrow.scss';
 @import '../blocks/reviews-table/__buyer-photos/reviews-table__buyer-photos.scss';
 @import '../blocks/reviews-table/__buyer-photo-wrapper/reviews-table__buyer-photo-wrapper.scss';
 @import '../blocks/reviews-table/__buyer-photo/reviews-table__buyer-photo';
-// @import '../blocks/reviews-table/__item-row/__status/_status-wrapper';
 
 @import '../blocks/status/status.scss';
 @import '../blocks/status/_value/status_value.scss';
-// @import '../blocks/reviews-table/__item-row/__status/_value/reviews-table__item-row__status_value.scss';
+
 @import '../blocks/rating/rating.scss';
 @import '../blocks/rating/__wrapper/rating__wrapper.scss';
 @import '../blocks/rating/__stars-wrapper/rating__stars-wrapper.scss';
@@ -30,6 +30,7 @@
 @import '../blocks/action-button/action-button.scss';
 
 @import '../blocks/article-text/article-text.scss';
+@import '../blocks/article-text/_error/article-text_error.scss';
 @import '../blocks/article-text/__addiotion-title/article-text__addition-title.scss';
 
 @import '../blocks/photo-preview/photo-preview.scss';
@@ -40,4 +41,5 @@
 body {
     margin: 0;
     font-family: Open Sans;
+    min-width: 280px;
 }

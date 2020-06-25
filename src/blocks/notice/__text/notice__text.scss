@@ -1,0 +1,22 @@
+.notice__text {
+    font-size: 15px;
+    line-height: 24px;
+    color: #383838;  
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+
+@media screen and (min-width:721px) {
+    .notice__text {
+        width: 648px;
+        height: 24px;
+        padding-left: 11px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .notice__text {        
+        padding: 30px 13px 30px 11px;
+    }
+}

@@ -1,3 +1,11 @@
 .reviews-table {
     display: block;
 }
+
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .reviews-table {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}

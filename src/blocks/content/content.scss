@@ -1,13 +1,26 @@
 .content {
-    width: 74%;
-    min-width: 930px;
-    max-width: 1375px;
-    margin: 0px auto;
-    padding-top: 131px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+}
 
-    & > div {
-        margin-bottom: 23px;
+@media screen and (min-width:721px) {
+    .content {
+        width: 74%;
+        min-width: 930px;
+        max-width: 1375px;
+        padding-top: 131px;
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+            margin-bottom: 23px;
+        }
+    }
+}
+
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .content {
+        width: 87.5%;
+        padding-top: 71px;
     }
 }

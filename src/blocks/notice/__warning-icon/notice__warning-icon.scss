@@ -1,0 +1,11 @@
+.notice__warning-icon {
+    width: 15px;
+    height: 15px;   
+}
+
+/* Mobile devices */
+@media screen and (min-width:0px) and (max-width:720px) {
+    .notice__warning-icon {
+        padding-top: 35px;
+    }
+}
