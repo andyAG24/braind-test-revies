@@ -70,8 +70,7 @@ function collapseText(ev) {
 }
 
 if (document.documentElement.clientWidth <= 720) {
-    let articleTitle = $('.article-text.article-text__addition-title');
-    // console.log($(articleTitle));
+    let articleTitle = $('.article-text__addition-title');
     for (let elem of articleTitle) {
         let itemRow = elem.parentElement.parentElement;
 
@@ -79,9 +78,5 @@ if (document.documentElement.clientWidth <= 720) {
         row.classList = ['reviews-table__item-row__addition-title'];
         row.appendChild(elem);
         itemRow.append(row);
-        
-        for (let child of itemRow.children) {
-            console.log($(child));
-        }
     }
 }

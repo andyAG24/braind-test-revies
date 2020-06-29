@@ -1,16 +1,11 @@
-@media screen and (min-width:0px) and (max-width:720px) {
-    .article-text {
-        &_error {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 20px;
-            /* or 167% */
-
-            letter-spacing: 0.25px;
-
-            color: #979797;
-        }
+.article-text {
+    &_error {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: #979797;
     }
 }

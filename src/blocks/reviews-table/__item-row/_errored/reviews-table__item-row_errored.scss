@@ -1,8 +1,10 @@
-.reviews-table {
-    &__item-row {
-        &_errored {
-            & > .reviews-table__item-row__cell-actions {
-                display: none;
+@media screen and (min-width:0px) and (max-width:720px) {
+    .reviews-table {
+        &__item-row {
+            &_errored {
+                & > .reviews-table__item-row__cell-actions {
+                    display: none;
+                }
             }
         }
     }

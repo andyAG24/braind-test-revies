@@ -1,5 +1,10 @@
 .rating {
-    &__stars {
-
+    &__star {
+        &_active {
+            display: flex;
+            overflow: hidden;
+            height: 15px;
+            width: 0%;
+        }
     }
 }

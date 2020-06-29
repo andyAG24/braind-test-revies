@@ -1,0 +1,25 @@
+.rating {
+    &__stars {
+        display: flex;
+        float: left;
+        padding-top: 2px;
+    }
+    &__star {
+        height: 15px;
+        width: 15px;
+        left: 0;
+        top: 0;
+        &-grey {
+            position: absolute;
+            filter: grayscale(1);
+        }
+        &-gold {
+            position: relative;
+        }
+        &-wrapper {
+            width: fit-content;
+            position: relative;
+            padding-right: 3px;
+        }
+    }   
+}

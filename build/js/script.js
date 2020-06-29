@@ -70,7 +70,7 @@ function collapseText(ev) {
 }
 
 if (document.documentElement.clientWidth <= 720) {
-    let articleTitle = $('.article-text.article-text__addition-title');
+    let articleTitle = $('.article-text__addition-title');
     for (let elem of articleTitle) {
         let itemRow = elem.parentElement.parentElement;
 
@@ -78,14 +78,42 @@ if (document.documentElement.clientWidth <= 720) {
         row.classList = ['reviews-table__item-row__addition-title'];
         row.appendChild(elem);
         itemRow.append(row);
-        
-        for (let child of itemRow.children) {
-            console.log($(child));
-        }
     }
 }
 
 
+"use strict";
+
+let numericalRating = $('.rating__numerical-rating');
+
+for (let elem of numericalRating) {
+    let rating = Number.parseFloat($(elem).text());
+    
+    let integerStars = Math.floor(rating),
+        roundingToBig = Math.ceil(rating),
+        fraction = rating - integerStars;
+    
+    let parentElement = elem.parentElement;
+    let starWrapper = $(parentElement).children('.rating__stars').children('.rating__star-wrapper');
+    
+    let index = 0,
+        width;
+    while (index < roundingToBig) {
+        if ((index >= integerStars) && (fraction != 0)) {
+            width = Math.asin( 2 * fraction - 1 ) / Math.PI + 0.5;
+            fillStar(starWrapper[index], width * 100);
+        } else {
+            width = 100;
+            fillStar(starWrapper[index], width);
+        }
+        index++;
+  }
+}
+
+function fillStar(starWrapper, width) {
+    let star = $(starWrapper).children('.rating__star_active');
+    $(star).css('width', `${width}%`);
+}
 let miniPhoto = $('.reviews-table__buyer-photo');
 
 for (let elem of miniPhoto) {
@@ -139,3 +167,4 @@ for (let elem of seeMoreArrow) {
         event.target.parentElement.click();
     });
 }
+//# sourceMappingURL=script.js.map

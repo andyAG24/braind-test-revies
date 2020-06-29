@@ -87,6 +87,10 @@
 
 /* Mobile devices */
 @media screen and (min-width:0px) and (max-width:720px) {
+    .reviews-table__item-row:not(:first-child) {
+        border-top: 1px solid #E8E7E7;
+    }
+
     .reviews-table {
         &__item-row {
             padding: 18px 20px;
@@ -109,6 +113,9 @@
                 &-photo {
                     display: flex;
                     margin: auto;
+                    & > img {
+                        max-width: 45px;
+                    }
                 }
                 &-review {
                     grid-column-start: 1;
@@ -123,7 +130,7 @@
             }
 
             &-addition {
-                padding-top: 5px;
+                padding-top: 9px;
                 grid-template-columns: none;
                 .reviews-table__item-row__cell-review {
                     padding-top: 8px;
@@ -150,7 +157,6 @@
 
             &-addition {
                 border-top: 1px solid #F2F2F2;
-                border-bottom: 1px solid #F2F2F2;
 
                 .reviews-table {
                     &__item-row {
