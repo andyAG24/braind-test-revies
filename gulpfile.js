@@ -64,7 +64,7 @@ gulp.task('clean', function(done) {
 gulp.task('browser-sync', function(done) {
   browserSync.init({
     server: {
-      baseDir: config.buildDir
+      baseDir: './'
     },
     notify: false
   });
@@ -77,8 +77,6 @@ gulp.task('copy', (done) => {
     .pipe(gulp.dest(config.buildImgDir));
   gulp.src(config.srcIconDir + '/*.{jpg,jpeg,gif,svg,png}')
     .pipe(gulp.dest(config.buildIconDir));
-  gulp.src(config.srcDir + '/*.html')
-    .pipe(gulp.dest(config.buildDir));
   done();
 });
 

@@ -1,3 +1,4 @@
+
 'use strict';
 var size = 192,
     articleContent = $('.article-text'),
@@ -80,7 +81,6 @@ if (document.documentElement.clientWidth <= 720) {
         itemRow.append(row);
     }
 }
-
 
 "use strict";
 
